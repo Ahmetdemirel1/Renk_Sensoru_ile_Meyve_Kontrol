@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+    <div class="container">
+
+
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Proje Özeti</h1>
+        <p>Arduino ve TCS230 Renk sensörü yardımı ile meyvelerin sağlam, çürük yada farklı olup olmadıklarını inceleyerek veri elde etmek.
+        Bu projedeki amacımız hızlı bir şekilde meyvelerin kontrolünü yapmak ve bu kontrol sonucu oluşan verileri düzenlemek.
+        </p>
+        <p>
+          <a href="https://github.com/Ahmetdemirel1"><i class="fa fa-github" style="font-size:42px" aria-hidden="true"></i> </a>
+          Proje kaynak kodlarına github'tan ulaşabilirsiniz
+        </p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="/uygula" role="button">Uygulamaya Başla &raquo;</a>
+        </p>
+        <h1>Proje için gerekli olan materyaller</h1>
+        <p></p>
+        <ul>
+          <li>Arduino Mega2560</li>
+          <li>TCS230 Renk sensörü</li>
+          <li>Lcd Shield</li>
+          <li>HC-SR04 Ultrasonic Mesafe Sensörü</li>
+          <li>Bağlantılar için jumper kablo</li>
+          <li>Breadboard</li>
+        </ul>
+        <h2>Proje metodları</h2>
+        <p>Projeye için gerekli materyalleri edindikten sonra proje tasarımına geçebiliriz.Bu projede Arduino Mega2560 kullanacağız(Şekil-1).
+          Daha sonra Lcd Shield kullanacağız(Şekil-2). Lcd Shieldimizi kullanırken Breadboard yerine direk Arduino üzerine monte ediyoruz.
+        </p>
+
+
+  <div class="row">
+        <div class="col-md-4"><img src="media/homeimages/arduino.jpg" class="rounded float-left" alt="..." width="450" height="250"></div>
+        <div class="col-md-4" style="color:#ffffff">Şekil-1</div>
+
+      </div>
+
+        <div class="row">
+        <div class="col-md-4"><img src="media/homeimages/lcd.jpg" class="rounded float-left" alt="..." width="450" height="250"></div>
+        <div class="col-md-4" style="color:#000000" >Şekil-2</div>
+      </div>
+        <p></p><br>
+
+
+
+      <p>Lcd shield'i taktıktan sonra mesafe ölüçü için kullanacağımız Hc-sr04 Ultrasonic mesafe sensörünü(şekil-3) breadboard üzerine yerleştiriyoruz.
+        Mesafe sensörünü kullanmamızdaki amaç meyveleri uzak mesafeden geçirme durumu olduğunda hatalı bir veri elde etmemek.
+      </p><br>
+        <div class="row">
+        <div class="col-md-4"><img src="media/homeimages/mesafe.jpg" class="rounded float-left" alt="..." width="450" height="250"></div>
+        <div class="col-md-4" style="color:#000000">Şekil-3</div>
+      </div>
+         <p></p><br>
+        <p>Mesafe sensörünü kullandıktan sonra projemizin temel sensörü olan TCS230 Renk sensörünü (Şekil-4) kullanıyoruz. Renk sensörünü kullanarak eyveleri renklerine göre seçme
+        imkanımız olacak bu sayede projemiz amacına ulaşmış olacak.</p>
+        <div class="row">
+        <div class="col-md-4"><img src="media/homeimages/rgb.jpg" class="rounded float-left" alt="..." width="450" height="450"></div>
+        <div class="col-md-4" style="color:#000000">Şekil-4</div>
+      </div>
+        <p></p><br>
+        <p>Uygulamamızın Arduino tarafında bu materyaller kullanılacak. Materyallerin bağlantıları şekil-5'deki gibi olacaktır.</p>
+        <div class="row">
+        <div class="col-md-4"><img src="media/homeimages/tasarim.png" class="rounded float-left" alt="..." width="1000" ></div>
+        <div class="col-md-4" style="color:#000000">Şekil-5</div>
+      </div>
+
+        <h1>Sonuc</h1>
+        <p>Arduino ve TCS230 Renk sensörü yardımı ile meyvelerin sağlam, çürük yada farklı olup olmadıklarını incelenerek veriler elde edildi.
+        Amacımız dahilinde meyve kontrolü yapıldı ve ulaştığımız veriler kullanıcıya yansıtıldı(şekil-6).
+        </p>
+        <div class="row">
+        <div class="col-md-4"><img src="media/homeimages/veriler.png"  class="rounded float-left" alt="..." width="1000" height="650"></div>
+        <div class="col-md-4" style="color:#000000">Şekil-6</div>
+      </div>
+
+      <p>
+        <a class="btn btn-lg btn-primary" href="/uygula" role="button">Uygulamaya Başla &raquo;</a>
+      </p>
+
+
+
+      </div>
+
+    </div> <!-- /container -->
+
+
+
+  {% endblock %}

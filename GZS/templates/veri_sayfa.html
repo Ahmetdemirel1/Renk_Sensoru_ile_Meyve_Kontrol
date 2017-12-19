@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+
+
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+         <div class="text-center">
+            <h1>Uygulama sonrası elimizdeki veriler şu şekildedir</h1>
+
+            <h3 scope="col">Seçilen Meyve : {{ user }}</h3>
+        </div>
+
+           <table class="table table-striped">
+
+      <thead>
+        <tr>
+
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <th scope="row">Toplam Meyve Adedi</th>
+          <th>{{ instance.adet }}</th>
+
+
+        </tr>
+        <tr>
+          <th scope="row">Sağlam Meyve Adedi</th>
+          <th>{{ instance.saglam_adet }}</th>
+
+        </tr>
+        <tr>
+          <th scope="row">Sağlam Olmayan Meyve Adedi</th>
+          <th>{{ instance.saglam_olmayan }} </th>
+        </tr>
+      <tr>
+          <th scope="row">Tahmini Sağlam Ağırlık</th>
+          <th>{{ instance.saglam_agirlik }} KG</th>
+        </tr>
+      <tr>
+          <th scope="row">Tahmini Sağlam Olmayan Ağırlık</th>
+          <th>{{ instance.saglam_olmayan_agirlik }} KG</th>
+        </tr>
+
+      </tbody>
+
+</table>
+
+      </div>
+
+    </div> <!-- /container -->
+
+
+
+
+{% endblock %}

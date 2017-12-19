@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+ <div class="container">
+     <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Meyve Seçimi Yaparak Uygulamaya Başlayabilirsiniz</h1><br>
+          <form class="form-horizontal" method="post" >
+              {% csrf_token %}
+              <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <select class="form-control" name="select" id="select">
+                            <option>Seçim</option>
+                            {% for fruit in fruit %}
+                              <option >{{ fruit.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                  </div>
+                </div>
+                <input type="submit" class="btn btn-outline-primary" name="basla" id="basla" value="Başla">
+              <input type="submit" class="btn btn-outline-danger" name="bitir" id="bitir" value=" Bitir ">
+               {% if messages %}
+                <ul class="list-group">
+                    {% for message in messages %}
+                        <li class="list-group-item {{ message.tags }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+          </form>
+      </div>
+ </div> <!-- /container -->
+
+
+
+
+
+{% endblock %}
